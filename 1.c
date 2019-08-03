@@ -10,6 +10,9 @@ int main(){
 int n,x,chc,ch=1,loc,locd;
 char con,u='y';
 
+// THIS PROGRAM OFFERS EVERY BASIC FEATURE OF LINKED LIST
+// YOU CAN SEE ALL THE FEATURES IN THE MENU
+
 while(ch!=13){
 printf("ENTER THE CHOICE \n\n ******** ENTER 1 TO ENTER THE NEW ELEMENT ******* \n");
 printf("******** ENTER 2 TO DISPLAY THE ELEMENTS ******* \n");
@@ -96,6 +99,8 @@ break;
 }
 }
 
+// THIS FUNCTION CREATES A NODE
+
 void create(int x){
 
 struct node *ptr, *temp;
@@ -116,6 +121,8 @@ temp = start;
 }
 }
 
+// THIS FUNCTION PRINTS THE LINKED LIST
+
 void display(){
 struct node *temp;
 temp = start;
@@ -132,6 +139,8 @@ temp = temp->next;
 }
 }
 
+// THIS FUNCTION INSERTS A NODE IN THE BEGINING OF THE LINKED LIST
+
 void insert_begin(int x){
 
 struct node *ptr;
@@ -141,6 +150,8 @@ ptr->data = x;
 ptr->next = start;
 start = ptr;
 }
+
+// THIS FUNCTION INSERTS A NODE IN THE LINKED LIST
 
 void insert_end(int x){
 
@@ -161,6 +172,8 @@ temp = start;
     temp->next = ptr;
 }
 }
+
+// THIS FUNCTION INSERTS A NODE AT ANY LOCATION AS PER USER CHOICE
 
 void insert_any(int x,int loc){
 struct node *ptr, *temp;
@@ -188,6 +201,8 @@ temp = start;
 }
 }
 
+// THIS FUNCTION DELETES A NODE FROM THE BEGINING OF THE LINKED LIST
+
 void delete_beg(){
 
 struct node *temp;
@@ -200,6 +215,8 @@ start = start->next;
 free(temp);
 }
 }
+
+// THIS FUNCTION DELETS THE NODE FROM THE END OF THE LINKED LIST
 
 void delete_end(){
 
@@ -218,6 +235,8 @@ prev->next = NULL;
 free(temp);
 }
 }
+
+// THIS FUNCTION DELETES THE NODE FROM ANY LOCATION AS PER USER CHOICE
 
 void delete_any(int pos){
 
@@ -248,6 +267,8 @@ free(t1);
 }
 }
 
+// THIS FUNCTION DELETES THE NODE AFTER A GIVEN ELEMENT AS PER USER CHOICE
+
 void delete_after(int y){
 
 struct node *temp,*t1;
@@ -273,6 +294,8 @@ free(t1);
 }
 }
 }
+
+// THIS FUNCTION INSERTS A NEW NODE AFTER A GIVEN ELEMENT AS PER USER CHOICE
 
 void insert_after(int x,int y){
 struct node *ptr, *temp, *p;
